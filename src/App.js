@@ -25,7 +25,7 @@ function App() {
 
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5001/highlight-spam', { text });
+      const res = await axios.post('https://spam-words-rewriter-backend.onrender.com/highlight-spam', { text });
       setHighlightedHTML(
         res.data.highlightedText.replace(
           /<mark>/g,
